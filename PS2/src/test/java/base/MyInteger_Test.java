@@ -1,7 +1,6 @@
 package base;
 
 import static org.junit.Assert.*;
-
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -25,10 +24,25 @@ public class MyInteger_Test {
 	@After
 	public void tearDown() throws Exception {
 	}
-
+	
+	// Testing a true and false case for the isEven method
 	@Test
-	public void test() {
-		assertTrue(1==1);
+	public void testEven() {
+        assertTrue(MyInteger.isEven(4));
+        assertFalse(MyInteger.isEven(5));
 	}
 
+	// Testing a true and false case for the isOdd method
+	@Test
+	public void testOdd() {
+		assertTrue(MyInteger.isOdd(5));
+		assertFalse(MyInteger.isOdd(4));
+	}
+
+	// Testing a true and false case for the isPrime method
+	@Test
+	public void testPrime() {
+		assertTrue(MyInteger.isPrime(5));
+		assertFalse(MyInteger.isPrime(6));
+	}
 }
